@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">🎨 ArtNest</a>
+        </div>
+        <!-- Hamburger icon -->
+        <!-- <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div> -->
+
+        <div class="menu-toggle" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="exhibitions.html">Exhibitions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Top section -->
+    <section>
+        <div class="container title-bg">
+            <div class="border">
+                <h2>EXPLORE A CURATED</h2>
+                <h2>SELECTION OF ARTWORKS</h2>
+                <h2>FROM TALENTED ARTISTS</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid section -->
+    <section class="g-gallery-section">
+        <div class="g-art-grid">
+            <div class="g-art-item">
+                <div class="hover-effect" style= "cursor: unset;">
+                    <a href="gallery.html"><img src="artists-photos/amy-winset-IxcuWHcCvJI-unsplash.jpg"
+                            alt="Art 1"></a>
+                    <button class="hover-text" data-target-page="gallery.html"
+                        data-target-section="painting-section">View Art</button>
+                </div>
+                <div class="text-item">Painting Collection</div>
+            </div>
+            <div class="g-art-item">
+                <div class="hover-effect">
+                    <a href="gallery.html"><img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg"
+                            alt="Art 1"></a>
+                    <button class="hover-text" data-target-page="gallery.html"
+                        data-target-section="canvas-section">View Art</button>
+                </div>
+                <div class="text-item">Canvas Collection</div>
+            </div>
+            <div class="g-art-item">
+                <div class="hover-effect">
+                    <a href="gallery.html"><img src="artists-photos/joseph-gordon-OsNakrzyVxI-unsplash.jpg"
+                            alt="Art 1"></a>
+                    <button class="hover-text" data-target-page="gallery.html"
+                        data-target-section="photography-section">View Gallery</button>
+                </div>
+                <div class="text-item">Photography Gallery</div>
+            </div>
+            <div class="g-art-item">
+                <div class="hover-effect artist-spotlight-image" data-target-page="artists.html"
+                    data-target-section="artists-section">
+                    <a><img src="Photos/artist-profile.jpg" alt="Art 1"></a>
+                    <button class="hover-text">View Artists</button>
+                </div>
+                <div class="text-item">Artist Spotlight</div>
+            </div>
+            <div class="g-art-item">
+                <div class="hover-effect gallery-events-image" data-target-page="exhibitions.html"
+                    data-target-section="exhibitions-section">
+                    <a><img src="Photos/art-gallery.jpg" alt="Art 1"></a>
+                    <button class="hover-text" data-target-page="exhibitions.html"
+                        data-target-section="exhibitions-section">View Events</button>
+                </div>
+                <div class="text-item">Gallery Events</div>
+            </div>
+            <div class="g-art-item">
+                <div class="hover-effect">
+                    <a href="gallery.html"><img src="Photos/sculpture-profile.jpg" alt="Art 1"></a>
+                    <button class="hover-text" data-target-page="gallery.html"
+                        data-target-section="sculpture-section">View Sculptures</button>
+                </div>
+                <div class="text-item">Sculpture Showcase</div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="sculpture-section" class="sculpture-section">
+        <h2 class="collection-title-t">Sculpture Collection</h2>
+        <div class="art-masonry-grid">
+            <!-- Visible -->
+            <div class="art-masonry-card">
+                <img src="Sculpture-gallery/sculpture-1.jpg" alt="Sculpture 1">
+                <p class="art-artist-name">Jonas Degener</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Sculpture-gallery/sculpture-2.jpg" alt="Sculpture 2">
+                <p class="art-artist-name">Jean Arthur</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Sculpture-gallery/sculpture-3.jpg" alt="Sculpture 3">
+                <p class="art-artist-name">Amy Winset</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Sculpture-gallery/sculpture-4.jpg" alt="Sculpture 4">
+                <p class="art-artist-name">Dan Cristian</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Sculpture-gallery/sculpture-5.jpg" alt="Sculpture 5">
+                <p class="art-artist-name">Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Sculpture-gallery/sculpture-6.jpg" alt="Sculpture 6">
+                <p class="art-artist-name">Joseph Gordon</p>
+            </div>
+
+            <!-- Hidden  -->
+            <div class="art-masonry-card art-hidden">
+                <img src="Sculpture-gallery/sculpture-7.jpg" alt="Sculpture 7">
+                <p class="art-artist-name">Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Sculpture-gallery/sculpture-8.jpg" alt="Sculpture 8">
+                <p class="art-artist-name">Jean Arthur</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Sculpture-gallery/sculpture-9.jpg" alt="Sculpture 9">
+                <p class="art-artist-name">By Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Sculpture-gallery/sculpture-10.jpg" alt="Sculpture 10">
+                <p class="art-artist-name">By Dan Cristian</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Sculpture-gallery/sculpture-11.jpg" alt="Sculpture 11">
+                <p class="art-artist-name">By Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Sculpture-gallery/sculpture-12.jpg" alt="Sculpture 11">
+                <p class="art-artist-name">By Jean Arthur</p>
+            </div>
+        </div>
+
+        <button class="art-view-more-btn">View More</button>
+    </section>
+
+
+    <section id="painting-section" class="paintings-section">
+        <h2 class="collection-title-t">Paintings Collection</h2>
+        <div class="art-masonry-grid">
+            <!-- Visible -->
+            <div class="art-masonry-card">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 1">
+                <p class="art-artist-name">Jonas Degener</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 2">
+                <p class="art-artist-name">Jean Arthur</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt="Art 3">
+                <p class="art-artist-name">Amy Winset</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Home-page-images/pexels-pixabay-271816.jpg" alt="Art 4">
+                <p class="art-artist-name">Dan Cristian</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt="Art 5">
+                <p class="art-artist-name">Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 6">
+                <p class="art-artist-name">Joseph Gordon</p>
+            </div>
+
+            <!-- Hidden  -->
+            <div class="art-masonry-card art-hidden">
+                <img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt="Art 5">
+                <p class="art-artist-name">Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 8">
+                <p class="art-artist-name">Jean Arthur</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Home-page-images/pexels-pixabay-271816.jpg" alt="Art 5">
+                <p class="art-artist-name">By Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 10">
+                <p class="art-artist-name">By Dan Cristian</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Home-page-images/pexels-pixabay-271816.jpg" alt="Art 5">
+                <p class="art-artist-name">By Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 8">
+                <p class="art-artist-name">By Jean Arthur</p>
+            </div>
+        </div>
+
+        <button class="art-view-more-btn">View More</button>
+    </section>
+
+
+    <section id="canvas-section" class="canvas-section">
+        <h2 class="collection-title-t">Canvas Collection</h2>
+        <div class="art-masonry-grid">
+            <!-- Visible -->
+            <div class="art-masonry-card">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 1">
+                <p class="art-artist-name">Jonas Degener</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 2">
+                <p class="art-artist-name">Jean Arthur</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt="Art 3">
+                <p class="art-artist-name">Amy Winset</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Home-page-images/pexels-pixabay-271816.jpg" alt="Art 4">
+                <p class="art-artist-name">Dan Cristian</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt="Art 5">
+                <p class="art-artist-name">Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 6">
+                <p class="art-artist-name">Joseph Gordon</p>
+            </div>
+
+            <!-- Hidden  -->
+            <div class="art-masonry-card art-hidden">
+                <img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt="Art 5">
+                <p class="art-artist-name">Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 8">
+                <p class="art-artist-name">Jean Arthur</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Home-page-images/pexels-pixabay-271816.jpg" alt="Art 5">
+                <p class="art-artist-name">By Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 10">
+                <p class="art-artist-name">By Dan Cristian</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Home-page-images/pexels-pixabay-271816.jpg" alt="Art 5">
+                <p class="art-artist-name">By Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 8">
+                <p class="art-artist-name">By Jean Arthur</p>
+            </div>
+        </div>
+
+        <button class="art-view-more-btn">View More</button>
+    </section>
+
+
+
+    <section id="photography-section" class="photography-section">
+        <h2 class="collection-title-t">Photography Collection</h2>
+        <div class="art-masonry-grid">
+            <!-- Visible -->
+            <div class="art-masonry-card">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 1">
+                <p class="art-artist-name">Jonas Degener</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 2">
+                <p class="art-artist-name">Jean Arthur</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt="Art 3">
+                <p class="art-artist-name">Amy Winset</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Home-page-images/pexels-pixabay-271816.jpg" alt="Art 4">
+                <p class="art-artist-name">Dan Cristian</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt="Art 5">
+                <p class="art-artist-name">Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 6">
+                <p class="art-artist-name">Joseph Gordon</p>
+            </div>
+
+            <!-- Hidden  -->
+            <div class="art-masonry-card art-hidden">
+                <img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt="Art 5">
+                <p class="art-artist-name">Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 8">
+                <p class="art-artist-name">Jean Arthur</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Home-page-images/pexels-pixabay-271816.jpg" alt="Art 5">
+                <p class="art-artist-name">By Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 10">
+                <p class="art-artist-name">By Dan Cristian</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="Home-page-images/pexels-pixabay-271816.jpg" alt="Art 5">
+                <p class="art-artist-name">By Gracie Fox</p>
+            </div>
+            <div class="art-masonry-card art-hidden">
+                <img src="artists-photos/jean-arthur-hSkbqHnt-g4-unsplash.jpg" alt="Art 8">
+                <p class="art-artist-name">By Jean Arthur</p>
+            </div>
+        </div>
+
+        <button class="art-view-more-btn">View More</button>
+    </section>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <strong><a href="contact.html">Contact Us</a></strong>
+            <div class="email">Email: artistry@gmail.com</div>
+            <div class="phone">Phone: +1 432-976-9007</div>
+        </div>
+        <div>
+            <strong>Follow Us</strong>
+            <div>Instagram</div>
+            <div>Facebook</div>
+            <div>Pinterest</div>
+        </div>
+        <div>
+            <strong>Navigation</strong>
+            <div>Privacy Policy</div>
+            <div>Terms of Use</div>
+            <div>Help Center</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1160 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  background: white;
+  color: black;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:hover {
+  color: white;
+}
+
+.button:after {
+  content: "";
+  background: rgb(40, 40, 40);
+  z-index: -10;
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.button:hover:after {
+  transform: translateX(0)
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+
+
+
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding: 0.5rem 0;
+  display: inline-block;
+}
+
+/* The animated underline bar */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background-color: black;
+
+  transform: scaleX(0);
+  transform-origin: center;
+  /* 👈 key part */
+  transition: transform 0.4s ease;
+}
+
+/* When active, show underline with center-out animation */
+.nav-links a.active::after {
+  transform: scaleX(1);
+  background-color: crimson;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  background-color: grey;
+}
+
+
+
+
+
+
+
+/* Hero Section */
+
+.hero {
+  width: 100%;
+  max-height: 450px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.intro {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.intro h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-section {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.gallery-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filters ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.7rem;
+  list-style: none;
+}
+
+.filters li button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 1.5rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.explore {
+  color: blue;
+  font-size: 1.25em;
+  padding: 0.4rem 1rem;
+  border-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.art-item img {
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Collection */
+
+.collection-title {
+  width: 100%;
+  height: auto;
+  padding: 3rem 2rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.collection-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+  background-color: #fff;
+
+}
+
+.collection-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.description {
+  flex: 2 2 350px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.description h2 {
+  padding-bottom: 0.7rem;
+}
+
+.description button {
+  padding: 0.6rem 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.side-image {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.side-image img {
+  aspect-ratio: 5/3;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.footer div {
+  max-width: auto;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.7rem;
+}
+
+.menu-toggle.open .menu-icon {
+  transform: rotate(45deg);
+}
+
+/*
+  .menu-toggle .bar {
+  width: 1.5rem;
+  height: 0.15rem;
+  background-color: #000;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(0.3rem, 0.3rem);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(0.3rem, -0.3rem);
+} */
+
+
+
+
+
+
+
+/* Gallery CSS */
+
+.container {
+  padding: 4rem 3rem 0rem 3rem;
+  background-color: white;
+}
+
+.container h2 {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  word-spacing: 1.3rem;
+}
+
+.container .border {
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.g-gallery-section {
+  padding: 4rem 3rem;
+  background-color: white;
+}
+
+.g-art-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.g-art-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-effect{
+  cursor: unset;
+}
+
+.hover-text {
+  position: absolute;
+  /* Position over the image */
+  top: 45%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Precisely center the button */
+  background-color: rgb(255, 255, 255, 0.9);
+  /* Example background with transparency */
+  color: black;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  /* Make it invisible initially */
+  visibility: hidden;
+  /* Prevents interaction when invisible */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* Smooth transition effect */
+  z-index: 2;
+  /* Ensures it appears above the image */
+}
+
+.hover-effect:hover img {
+  opacity: 0.8;
+}
+
+.hover-effect:hover .hover-text {
+  opacity: 1;
+  /* Fully visible on hover */
+  visibility: visible;
+  /* Makes it interactive on hover */
+}
+
+.g-art-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 6 / 3;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.g-art-item .text-item {
+  padding-top: 0.5rem;
+  font-size: 1.3rem;
+  /* position: relative; */
+}
+
+.paintings-section {
+  background-color: white;
+}
+
+.collection-title-t {
+  font-size: 2rem;
+  padding: 2rem;
+  padding-left: 3rem;
+  margin-bottom: 0.7rem;
+  background-color: rgb(245, 244, 244);
+  border-top: 1px solid rgb(213, 213, 213);
+  border-bottom: 1px solid rgb(213, 213, 213);
+}
+
+.art-masonry-grid {
+  column-count: 3;
+  column-gap: 1.5rem;
+  padding: 3rem
+}
+
+
+.art-masonry-card {
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+}
+
+.art-masonry-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.art-artist-name {
+  font-weight: 600;
+  margin-top: 0.25rem;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+}
+
+.art-hidden {
+  display: none;
+}
+
+.art-view-more-btn {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.art-view-more-btn:hover {
+  background-color: #333;
+}
+
+
+
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  .container {
+    padding: 3rem 2rem 0rem 2rem;
+  }
+
+  .container h2 {
+    font-size: 2.5rem;
+    word-spacing: 1rem;
+  }
+
+  .g-gallery-section {
+    padding: 3rem 2rem;
+  }
+
+  .g-art-grid {
+    grid-template-columns: repeat(2, 1fr); /* keep 2-column grid for better readability */
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+
+  .hover-text {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .g-art-item .text-item {
+    font-size: 1.1rem;
+  }
+
+
+  .art-masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 799px) {
+
+  .container {
+    padding: 2rem 1rem 0rem 1rem;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+    word-spacing: 0.5rem;
+    text-align: center;
+  }
+
+  .container .border {
+    padding-bottom: 2rem;
+  }
+
+  .g-gallery-section {
+    padding: 2rem 1rem;
+  }
+
+  .g-art-grid {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+    row-gap: 1.5rem;
+  }
+
+  .hover-text {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .g-art-item .text-item {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .art-masonry-grid {
+    column-count: 1;
+  }
+
+  .art-collection-section {
+    padding: 1rem;
+  }
+
+  .collection-title-t {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .art-artist-name {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Artists CSS */
+
+.artists-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.artists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1.5em;
+  border: 1px solid black;
+  border-radius: 1em;
+}
+
+.artist-data {
+  display: flex;
+  gap: 2rem;
+}
+
+.artist-photo {
+  flex: 0.5 0.5 100px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  /* here we gave radius to div, not to the image, because if photo is not square, then it will make oval/ellipse */
+}
+
+.artist-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.artist-info {
+  flex: 3 3 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.artist-socials {
+  display: flex; 
+  /* default direction : row */
+}
+
+.artist-art-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 0.3rem;
+  gap: 1.5em;
+}
+
+.artist-art-grid img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  display: block;
+  object-fit: cover;
+}
+
+.artist-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.artist-socials a {
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.artist-socials a:hover {
+  color: #e60023; /* Pinterest red for hover */
+}
+
+.artist-socials a:nth-child(2):hover {
+  color: #c13584; /* Instagram pink */
+}
+
+.artist-socials a:nth-child(3):hover {
+  color: #1877f2; /* Facebook Blue */
+}
+
+
+
+
+
+
+/* Exhibition CSS */
+
+
+.up-container {
+  padding: 3rem 3rem 1rem 3rem;
+  background-color: white;
+}
+
+.up-container h2 {
+  font-size: 2.5em;
+  letter-spacing: 0.rem;
+  word-spacing: 0.4rem;
+}
+
+.exhibition-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-button{
+  border-radius: 2em;
+  padding: 0.5em 1.7em;
+  color: blue;
+  border: none;
+  font-size: 1.1em;
+}
+
+.exhibition-events{
+  padding: 2rem;
+  background-color: white;
+}
+
+.exhibition-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  background-color: white;
+}
+
+.exhibition-card {
+  flex: 0 0 calc(33.33% - 1rem);
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  width: 32%;
+}
+
+.exhibition-card img {
+  width: 100%;
+  height: 230px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  object-fit: cover;
+}
+
+.exhibition-content {
+  padding: 1rem;
+}
+
+.exhibition-content h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.exhibition-content p {
+  font-size: 0.875rem;
+  color: #333;
+  margin: 0.25rem 0;
+}
+
+/* .calendar-button {
+  float: right;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+} */
+
+
+.calendar-section img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .exhibition-card {
+    flex: 0 0 80%;
+  }
+}
+
+
+
+
+
+
+/* Contact page */
+
+.contact-gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+}
+
+.contact-container {
+  flex: 1 1 350px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-info {
+  flex: 1 1 350px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-info div {
+  padding: 1%;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.contact-container h2,
+.gallery-info h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 0.8rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: left;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.site-footer a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media (min-width: 1025px) {
+  iframe {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 800px) {
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .art-masonry-grid {
+    column-count: 2;
+  }
+
+  .artist-photo {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .artist-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .artist-data {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .artist-info {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0.5rem;
+  }
+
+  .artist-socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .artist-art-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 230px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;    
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .filters ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    list-style: none;
+  }
+
+  .art-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-main {
+    gap: 2rem;
+  }
+
+  .collection-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .description {
+    flex: 1 1 150px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .description h2 {
+    padding-bottom: 0.5rem;
+  }
+
+  .side-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .side-image div {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    /* Ensures radius applies even if image fully fills its container. */
+  }
+
+  .side-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+    /* Ensures radius applies even if image fully fills its container. */
+    object-fit: cover;
+    display: block;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 50%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Gallery Collection Below */
+
+  .art-masonry-grid {
+    column-count: 1;
+  }
+
+  .art-collection-section {
+    padding: 1rem;
+  }
+
+  .collection-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .art-artist-name {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+
+  /*  Artist */
+
+  .artists-section {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .artists-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .artist-data {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .artist-photo {
+    width: 120px;
+    height: 120px;
+    flex: 0 0 auto;
+  }
+
+  .artist-photo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .artist-info {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .artist-socials {
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .artist-art-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .artist-art-grid img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Contact */
+
+  .gallery-info {
+    flex: 0 0 350px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .gallery-info div {
+    padding: 0;
+  }
+
+  .site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+  }
+}
+

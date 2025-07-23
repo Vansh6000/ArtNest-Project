@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtNest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">🎨 ArtNest</a>
+        </div>
+        <!-- Hamburger icon -->
+        <!-- 
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            -->
+        <div class="menu-toggle" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="exhibitions.html">Exhibitions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Image -->
+    <section class="hero">
+        <img src="Home-page-images/cihad-dagli-loF-A505l1k-unsplash.jpg" alt="Art banner">
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="intro">
+        <h1 style="letter-spacing: 0.1em">Welcome to ArtNest</h1>
+        <p>
+            Discover the finest collection of contemporary and classic art pieces curated from around the world.
+            Our gallery is dedicated to celebrating the creativity and diversity of artists and their works.
+            Whether you're an avid collector or a casual enthusiast, Artistry Showcase provides a serene space
+            to explore and appreciate art in its many forms.
+        </p>
+    </section>
+
+    <section class="gallery-section">
+        <h2>Artworks</h2>
+        <div class="filters">
+            <ul>
+                <li><span><button data-target-page="index.html">Paintings</button></span></li>
+                <li><span><button data-target-page="index.html">Canvas</button></span></li>
+                <li><span><button data-target-page="index.html">Photography</button></span></li>
+                <li><span><button data-target-page="index.html">Sculptures</button></span></li>
+            </ul>
+            <div class="explore">
+                <div><a href="gallery.html">Explore ></a></div>
+            </div>
+        </div>
+        
+        <div class="art-grid">
+            <div class="art-item">
+                <img src="Home-page-images/pexels-steve-16375129.jpg" alt="Art 1">
+            </div>
+            <div class="art-item">
+                <img src="Home-page-images/kevin-mueller-NdK8Ed-Qx3U-unsplash.jpg" alt="Art 2">
+            </div>
+            <div class="art-item">
+                <img src="Home-page-images/pexels-anniroenkae-3219951.jpg" alt="Art 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection -->
+    <section>
+        <div class="collection-title">
+            <h1>Our Collection</h1>
+        </div>
+        <div class="collection-main">
+
+            <div class="collection-item" id="painting-collection">
+                <div class="description">
+                    <div>
+                        <h2>Paintings</h2>
+                        <p>Our painting collection features a variety of styles and techniques, showcasing the
+                            creativity of talented artists. Each piece is carefully selected to inspire and captivate
+                            art lovers.</p>
+                    </div>
+                    <div>
+                        <button class="button" data-target-page="gallery.html" data-target-section="paintings-section">
+                            View Art
+                        </button>
+                    </div>
+                </div>
+                <div class="side-image">
+                    <div><img src="Home-page-images/pexels-pixabay-271816.jpg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="collection-item" id="canvas-collection">
+                <div class="description">
+                    <div>
+                        <h2>Canvas</h2>
+                        <p>Our canvas collection showcases vibrant and expressive artworks that reflect the unique
+                            vision of each artist. These pieces add depth and character to any space, capturing emotion
+                            with every stroke.</p>
+                    </div>
+                    <div>
+                        <button class="button" data-target-page="gallery.html" data-target-section="canvas-section">
+                            View Canvas
+                        </button>
+                    </div>
+                </div>
+                <div class="side-image">
+                    <div><img src="Home-page-images/pexels-juresiric-716733.jpg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="collection-item" id="photography-collection">
+                <div class="description">
+                    <div>
+                        <h2>Photography</h2>
+                        <p>Our photography section highlights stunning visuals that tell stories through the lens.
+                            Discover breathtaking landscapes and emotive portraits from various. photographers.</p>
+                    </div>
+                    <div>
+                        <button class="button" data-target-page="gallery.html"
+                            data-target-section="photography-section">
+                            See Photos
+                        </button>
+                    </div>
+                </div>
+                <div class="side-image">
+                    <div><img src="home-page-images/tobias-reich-ivrKJ-ap-pU-unsplash.jpg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="collection-item" id="artist-collection">
+                <div class="description">
+                    <div>
+                        <h2>Featured Artists</h2>
+                        <p>Meet our featured artists who bring their unique perspectives and styles to the gallery. Each
+                            artist's work is a testament to their creativity and passion.</p>
+                    </div>
+                    <div>
+                        <button class="button" data-target-page="artists.html" data-target-section="artists-section">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="side-image">
+                    <div><img src="Home-page-images/erin-with-Xv-mkq__dMY-unsplash.jpg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="collection-item" id="sculpture-collection">
+                <div class="description">
+                    <div>
+                        <h2>Sculptures</h2>
+                        <p>Explore our diverse range of sculptures that blend creativity and craftsmanship. Each piece
+                            is a unique expression of artistic vision, perfect for any art enthusiast.</p>
+                    </div>
+                    <div>
+                        <button class="button" data-target-page="gallery.html" data-target-section="sculpture-section">
+                        <!-- <button disabled style="cursor:unset"> -->
+                            View Sculptures
+                        </button>
+                    </div>
+                </div>
+                <div class="side-image">
+                    <div><img src="Home-page-images/alexey-aladashvili-GDrlIo9hErk-unsplash.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <strong><a href="contact.html">Contact Us</a></strong>
+            <div class="email">Email: artistry@gmail.com</div>
+            <div class="phone">Phone: +1 432-976-9007</div>
+
+        </div>
+        <div>
+            <strong>Follow Us</strong>
+            <div>Instagram</div>
+            <div>Facebook</div>
+            <div>Pinterest</div>
+        </div>
+        <div>
+            <strong>Navigation</strong>
+            <div>Privacy Policy</div>
+            <div>Terms of Use</div>
+            <div>Help Center</div>
+        </div>
+    </footer>
+
+    <!-- <script>
+    // index artworks button redirect to below collection respectively
+
+    function redirectToSection(event) {
+  event.preventDefault();
+  
+  const targetButton = event.currentTarget;
+  const targetPage = targetButton.dataset.targetPage;
+  const targetSection = targetButton.dataset.targetSection;
+  
+  if (window.location.pathname.endsWith(targetPage)) {
+    const target = document.getElementById(targetSection);
+    const offset = 100; // height of navbar
+    const y = target.getBoundingClientRect().top + window.scrollY - offset;
+    
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  } else {
+    window.location.href = `${targetPage}#${targetSection}`;
+  }
+}
+    </script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
